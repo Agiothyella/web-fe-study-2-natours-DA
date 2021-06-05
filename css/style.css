@@ -1,0 +1,154 @@
+/* --------------------- IMPORT --------------------- */
+/* line 1, sass/base/_base.scss */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* line 9, sass/base/_base.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 13, sass/base/_base.scss */
+body {
+  box-sizing: border-box; }
+
+/* --------------------- KEYFRAMES --------------------- */
+@keyframes move-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  80% {
+    transform: translateY(0); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes move-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/* line 1, sass/base/_typography.scss */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+/* line 10, sass/base/_typography.scss */
+.header-caption {
+  margin: 0 0 4rem 0;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  /* line 16, sass/base/_typography.scss */
+  .header-caption--primary {
+    display: block;
+    margin: 0 -3.5rem 0 0;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: move-in-left 0.5s ease-out; }
+  /* line 25, sass/base/_typography.scss */
+  .header-caption--secondary {
+    display: block;
+    margin: 0 -1.75rem 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: move-in-right 0.5s ease-out; }
+
+/* line 2, sass/components/_button.scss */
+.btn:link, .btn:visited {
+  display: inline-block;
+  position: relative;
+  border-radius: 10rem;
+  padding: 1.5rem 4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: box-shadow 0.1s transform 0.1s; }
+
+/* line 14, sass/components/_button.scss */
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  z-index: -1;
+  transition: all 0.4s; }
+
+/* line 27, sass/components/_button.scss */
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  /* line 31, sass/components/_button.scss */
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+/* line 37, sass/components/_button.scss */
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
+
+/* line 42, sass/components/_button.scss */
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  /* line 46, sass/components/_button.scss */
+  .btn--white::after {
+    background-color: #fff; }
+
+/* line 51, sass/components/_button.scss */
+.btn--animation {
+  animation: move-in-up 0.5s ease-out 0.4s;
+  animation-fill-mode: backwards; }
+
+/* line 1, sass/layout/_header.scss */
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  /* line 14, sass/layout/_header.scss */
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  /* line 20, sass/layout/_header.scss */
+  .header__logo {
+    height: 3.5rem; }
+  /* line 24, sass/layout/_header.scss */
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
