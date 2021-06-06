@@ -1,4 +1,6 @@
 /* --------------------- IMPORT --------------------- */
+/* --------------------- COLORS --------------------- */
+/* --------------------- GRID --------------------- */
 /* line 1, sass/base/_base.scss */
 *,
 *::before,
@@ -50,18 +52,17 @@ body {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
 
-/* line 10, sass/base/_typography.scss */
+/* line 9, sass/base/_typography.scss */
 .header-caption {
   margin: 0 0 4rem 0;
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; }
-  /* line 16, sass/base/_typography.scss */
+  /* line 15, sass/base/_typography.scss */
   .header-caption--primary {
     display: block;
     margin: 0 -3.5rem 0 0;
@@ -69,7 +70,7 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: move-in-left 0.5s ease-out; }
-  /* line 25, sass/base/_typography.scss */
+  /* line 24, sass/base/_typography.scss */
   .header-caption--secondary {
     display: block;
     margin: 0 -1.75rem 0 0;
@@ -77,6 +78,16 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: move-in-right 0.5s ease-out; }
+
+/* line 34, sass/base/_typography.scss */
+.header-secondary {
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase; }
 
 /* line 2, sass/components/_button.scss */
 .btn:link, .btn:visited {
@@ -129,6 +140,42 @@ body {
   animation: move-in-up 0.5s ease-out 0.4s;
   animation-fill-mode: backwards; }
 
+/* line 1, sass/layout/_grid.scss */
+.row {
+  display: flow-root;
+  max-width: 114rem;
+  color: white;
+  text-align: center;
+  margin: 0 auto; }
+  /* line 8, sass/layout/_grid.scss */
+  .row:not(:last-child) {
+    margin-bottom: 40px; }
+  /* line 12, sass/layout/_grid.scss */
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    /* line 16, sass/layout/_grid.scss */
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  /* line 22, sass/layout/_grid.scss */
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  /* line 26, sass/layout/_grid.scss */
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  /* line 29, sass/layout/_grid.scss */
+  .row .col-2-of-3 {
+    width: calc( (2 * (100% - 2 * 6rem) / 3) + 6rem); }
+  /* line 35, sass/layout/_grid.scss */
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  /* line 38, sass/layout/_grid.scss */
+  .row .col-2-of-4 {
+    width: calc( (2 * (100% - 3 * 6rem) / 4) + 6rem); }
+  /* line 43, sass/layout/_grid.scss */
+  .row .col-3-of-4 {
+    width: calc( (3 * (100% - 3 * 6rem) / 4) + (2 * 6rem)); }
+
 /* line 1, sass/layout/_header.scss */
 .header {
   position: relative;
@@ -152,3 +199,9 @@ body {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%); }
+
+/* line 1, sass/pages/_home.scss */
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin: -20vh 0 0 0; }
