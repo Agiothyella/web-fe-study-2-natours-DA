@@ -1,8 +1,6 @@
 .row {
   display: flow-root;
   max-width: $grid-width;
-  color: white;
-  text-align: center;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -10,7 +8,6 @@
   }
 
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {

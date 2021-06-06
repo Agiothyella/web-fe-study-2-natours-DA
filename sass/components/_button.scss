@@ -5,10 +5,10 @@
     position: relative;
     border-radius: 10rem;
     padding: 1.5rem 4rem;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     text-transform: uppercase;
     text-decoration: none;
-    transition: box-shadow 0.1s transform 0.1s;
+    transition: all 0.1s;
   }
 
   &::after {
@@ -51,5 +51,31 @@
   &--animation {
     animation: move-in-up 0.5s ease-out 0.4s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 0.3rem;
+    color: $color-primary;
+    font-size: $default-font-size;
+    border-bottom: 0.1rem solid $color-primary;
+    border-radius: 0.1rem;
+    text-decoration: none;
+    transition: all 0.1s;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 0.6rem rgba($color-black, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0rem);
+    box-shadow: 0 0.3rem 0.3rem rgba($color-black, 0.2);
   }
 }
