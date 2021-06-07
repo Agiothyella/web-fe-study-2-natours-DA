@@ -166,66 +166,63 @@ body {
     color: transparent;
     font-size: 6rem; }
 
-/* line 2, sass/components/_button.scss */
-.btn:link, .btn:visited {
-  display: inline-block;
-  position: relative;
-  border-radius: 10rem;
-  padding: 1.5rem 4rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.1s; }
+/* line 1, sass/components/_button.scss */
+.btn {
+  z-index: 0; }
+  /* line 4, sass/components/_button.scss */
+  .btn:link, .btn:visited {
+    display: inline-block;
+    position: relative;
+    border-radius: 10rem;
+    padding: 1.5rem 4rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.1s; }
+  /* line 16, sass/components/_button.scss */
+  .btn::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: -1;
+    transition: all 0.4s; }
+  /* line 29, sass/components/_button.scss */
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    /* line 33, sass/components/_button.scss */
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  /* line 39, sass/components/_button.scss */
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
+  /* line 44, sass/components/_button.scss */
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    /* line 48, sass/components/_button.scss */
+    .btn--white::after {
+      background-color: #fff; }
+  /* line 53, sass/components/_button.scss */
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    /* line 57, sass/components/_button.scss */
+    .btn--green::after {
+      background-color: #55c57a; }
+  /* line 62, sass/components/_button.scss */
+  .btn--animation {
+    animation: move-in-up 0.5s ease-out 0.4s;
+    animation-fill-mode: backwards; }
 
-/* line 14, sass/components/_button.scss */
-.btn::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  z-index: -1;
-  transition: all 0.4s; }
-
-/* line 27, sass/components/_button.scss */
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-  /* line 31, sass/components/_button.scss */
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
-
-/* line 37, sass/components/_button.scss */
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
-
-/* line 42, sass/components/_button.scss */
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  /* line 46, sass/components/_button.scss */
-  .btn--white::after {
-    background-color: #fff; }
-
-/* line 51, sass/components/_button.scss */
-.btn--green {
-  background-color: #55c57a;
-  color: #fff; }
-  /* line 55, sass/components/_button.scss */
-  .btn--green::after {
-    background-color: #55c57a; }
-
-/* line 60, sass/components/_button.scss */
-.btn--animation {
-  animation: move-in-up 0.5s ease-out 0.4s;
-  animation-fill-mode: backwards; }
-
-/* line 67, sass/components/_button.scss */
+/* line 69, sass/components/_button.scss */
 .btn-text:link, .btn-text:visited {
   display: inline-block;
   padding: 0.5rem;
@@ -236,14 +233,14 @@ body {
   text-decoration: none;
   transition: all 0.1s; }
 
-/* line 79, sass/components/_button.scss */
+/* line 81, sass/components/_button.scss */
 .btn-text:hover {
   color: #fff;
   background-color: #55c57a;
   transform: translateY(-0.2rem);
   box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.2); }
 
-/* line 86, sass/components/_button.scss */
+/* line 88, sass/components/_button.scss */
 .btn-text:active {
   transform: translateY(0rem);
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2); }
