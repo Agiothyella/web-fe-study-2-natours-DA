@@ -144,6 +144,23 @@ body {
 .u-margin-top-small {
   margin-top: 1.5rem; }
 
+/* line 1, sass/components/_bg-video.scss */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.15;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; }
+  /* line 12, sass/components/_bg-video.scss */
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 /* line 1, sass/components/_box-features.scss */
 .box-features {
   background-color: rgba(255, 255, 255, 0.7);
@@ -394,6 +411,59 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
+/* line 1, sass/components/_story.scss */
+.story {
+  width: 75%;
+  padding: 6rem;
+  padding-left: 9rem;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  /* line 12, sass/components/_story.scss */
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  /* line 17, sass/components/_story.scss */
+  .story:hover .story__photo {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%); }
+  /* line 22, sass/components/_story.scss */
+  .story__shape {
+    position: relative;
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  /* line 32, sass/components/_story.scss */
+  .story__photo {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.1);
+    backface-visibility: hidden;
+    transition: all 0.4s; }
+  /* line 39, sass/components/_story.scss */
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.5rem #000, -0.1rem -0.1rem 0.5rem #000;
+    backface-visibility: hidden;
+    transform: translate(-50%, 20%);
+    transition: all 0.4s; }
+  /* line 56, sass/components/_story.scss */
+  .story__text {
+    transform: skewX(12deg); }
+
 /* line 1, sass/layout/_grid.scss */
 .row {
   display: flow-root;
@@ -401,7 +471,7 @@ body {
   margin: 0 auto; }
   /* line 6, sass/layout/_grid.scss */
   .row:not(:last-child) {
-    margin-bottom: 40px; }
+    margin-bottom: 8rem; }
   /* line 10, sass/layout/_grid.scss */
   .row [class^="col-"] {
     float: left; }
@@ -471,5 +541,11 @@ body {
 /* line 24, sass/pages/_home.scss */
 .section-tours {
   background-color: #f7f7f7;
-  padding: 20rem 0 15rem 0;
+  padding: 20rem 0 10rem 0;
   margin: -10vh 0 0 0; }
+
+/* line 30, sass/pages/_home.scss */
+.section-stories {
+  position: relative;
+  background-color: transparent;
+  padding: 15rem 0; }
