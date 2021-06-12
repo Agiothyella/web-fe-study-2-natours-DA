@@ -10,7 +10,7 @@
     height: 51rem;
     width: 100%;
     overflow: hidden;
-    border-radius: 0.3rem;
+    border-radius: $border-radius;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     backface-visibility: hidden;
     transition: all 0.8s ease;
@@ -154,12 +154,9 @@
   }
 
   &__cta {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include center-absolute;
     width: 90%;
     text-align: center;
-    transform: translate(-50%, -50%);
   }
 
   &__price-box {

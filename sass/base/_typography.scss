@@ -38,6 +38,7 @@ body {
     $color-primary-light,
     $color-primary-dark
   );
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-size: 3.5rem;

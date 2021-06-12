@@ -1,6 +1,7 @@
 .btn {
   z-index: 0;
 
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -11,6 +12,9 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.1s;
+
+    border: none;
+    cursor: pointer;
   }
 
   &::after {
@@ -36,7 +40,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.2);
   }
