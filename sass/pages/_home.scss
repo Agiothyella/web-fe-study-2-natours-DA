@@ -2,6 +2,10 @@
   background-color: $color-grey-light;
   padding: 20rem 0;
   margin: -20vh 0 0 0;
+
+  @include res(tabp) {
+    padding-bottom: 25rem;
+  }
 }
 
 .section-features {
@@ -16,6 +20,10 @@
   background-size: cover;
   transform: skewY(-4deg);
 
+  @include res(tabp) {
+    padding: 10rem 0;
+  }
+
   & > * {
     transform: skewY(4deg);
   }
@@ -25,12 +33,20 @@
   background-color: $color-grey-light;
   padding: 20rem 0 10rem 0;
   margin: -10vh 0 0 0;
+
+  @include res(tabp) {
+    padding: 15rem 0 0 0;
+  }
 }
 
 .section-stories {
   position: relative;
   background-color: transparent;
   padding: 15rem 0;
+
+  @include res(tabp) {
+    padding: 10rem 0 5rem 0;
+  }
 }
 
 .section-book {
@@ -40,4 +56,8 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include res(tabp) {
+    padding: 5rem 0;
+  }
 }

@@ -4,3 +4,37 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERIES
+// 0-600 Phone
+// 600-900 Tablet Potrait
+// 900-1200 Tablet Landscape
+// 1200-1800 MAIN STYLE
+// 1800+ Desktop
+// 1em = 16px
+
+@mixin res($bp) {
+  @if $bp == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $bp == tabp {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $bp == tabl {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $bp == bigd {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

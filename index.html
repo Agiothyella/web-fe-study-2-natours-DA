@@ -9,8 +9,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="vendors/Linea/icon-font.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="vendors/Linea/icon-font.css" /> -->
+
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natours | Exciting tours for adventurous people</title>
@@ -98,14 +99,20 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes=" (max-width: 56.25em) 21vw, (max-width: 37.5em) 14vw, 300px"
                 src="img/nat-1-large.jpg"
                 alt="nature photo 1"
                 class="composition__photo composition__photo--p1"
               /><img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes=" (max-width: 56.25em) 21vw, (max-width: 37.5em) 14vw, 300px"
                 src="img/nat-2-large.jpg"
                 alt="nature photo 2"
                 class="composition__photo composition__photo--p2"
               /><img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes=" (max-width: 56.25em) 21vw, (max-width: 37.5em) 14vw, 300px"
                 src="img/nat-3-large.jpg"
                 alt="nature photo 3"
                 class="composition__photo composition__photo--p3"
@@ -341,6 +348,7 @@
                     class="form__input"
                     placeholder="Full Name"
                     required
+                    autocomplete="off"
                   />
                   <label for="input__name" class="form__label">Full Name</label>
                 </div>
@@ -351,6 +359,7 @@
                     class="form__input"
                     placeholder="E-mail"
                     required
+                    autocomplete="off"
                   />
                   <label for="input__email" class="form__label">Email</label>
                 </div>
@@ -392,7 +401,17 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)" />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="logo"
+        /></picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">

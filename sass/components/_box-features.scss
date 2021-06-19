@@ -7,6 +7,10 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   transition: all 0.3s;
 
+  @include res(tabp) {
+    padding: 2rem;
+  }
+
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 0 2.5rem 6rem rgba($color-black, 0.2);
@@ -24,5 +28,9 @@
     background-clip: text;
     color: transparent;
     font-size: 6rem;
+
+    @include res(tabp) {
+      margin: 0;
+    }
   }
 }

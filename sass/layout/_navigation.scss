@@ -14,6 +14,16 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 52;
+
+    @include res(tabp) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include res(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -29,6 +39,16 @@
     border-radius: 50%;
     z-index: 50;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include res(tabp) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include res(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -37,7 +57,7 @@
     width: 0;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     z-index: 51;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -90,6 +110,7 @@
   }
 
   &__checkbox:checked ~ &__nav {
+    right: 0;
     opacity: 1;
     width: 100%;
   }

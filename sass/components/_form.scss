@@ -18,6 +18,10 @@
     font-size: 1.5rem;
     transition: all 0.3s;
 
+    @include res(tabp) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       border-bottom: 2px solid $color-primary;
@@ -58,6 +62,11 @@
   &__radio-group {
     display: inline-block;
     width: 49%;
+
+    @include res(tabp) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-input {
@@ -85,8 +94,8 @@
       @include center-absolute;
       content: "";
       display: block;
-      height: 1rem;
-      width: 1rem;
+      height: 1.6rem;
+      width: 1.6rem;
       opacity: 0;
       background-color: $color-primary;
       border-radius: 50%;

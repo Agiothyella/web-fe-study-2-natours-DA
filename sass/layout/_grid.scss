@@ -3,8 +3,17 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include res(tabp) {
+    max-width: $grid-width-small;
+    padding: 0 3rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include res(tabp) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   [class^="col-"] {
@@ -12,6 +21,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include res(tabp) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include res(tabp) {
+      width: 100% !important;
     }
   }
 
