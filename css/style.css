@@ -1046,6 +1046,7 @@ body {
 /* line 54, sass/layout/_navigation.scss */
 .navigation__nav {
   opacity: 0;
+  visibility: hidden;
   height: 100vh;
   width: 0;
   position: fixed;
@@ -1054,7 +1055,7 @@ body {
   z-index: 51;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
-/* line 65, sass/layout/_navigation.scss */
+/* line 66, sass/layout/_navigation.scss */
 .navigation__list {
   position: absolute;
   top: 50%;
@@ -1063,11 +1064,11 @@ body {
   list-style: none;
   text-align: center; }
 
-/* line 71, sass/layout/_navigation.scss */
+/* line 72, sass/layout/_navigation.scss */
 .navigation__item {
   margin: 1rem; }
 
-/* line 76, sass/layout/_navigation.scss */
+/* line 77, sass/layout/_navigation.scss */
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
   padding: 1rem 2rem;
@@ -1079,68 +1080,69 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s; }
-  /* line 94, sass/layout/_navigation.scss */
+  /* line 95, sass/layout/_navigation.scss */
   .navigation__link:link span, .navigation__link:visited span {
     display: inline-block;
     margin-right: 1.5rem; }
 
-/* line 100, sass/layout/_navigation.scss */
+/* line 101, sass/layout/_navigation.scss */
 .navigation__link:hover, .navigation__link:active {
   color: #55c57a;
   background-position: 100%;
   transform: translateX(1rem); }
 
-/* line 108, sass/layout/_navigation.scss */
+/* line 109, sass/layout/_navigation.scss */
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(75); }
 
-/* line 112, sass/layout/_navigation.scss */
+/* line 113, sass/layout/_navigation.scss */
 .navigation__checkbox:checked ~ .navigation__nav {
   right: 0;
   opacity: 1;
+  visibility: visible;
   width: 100%; }
 
-/* line 118, sass/layout/_navigation.scss */
+/* line 120, sass/layout/_navigation.scss */
 .navigation__icon {
   position: relative;
   margin-top: 3.3rem; }
-  /* line 122, sass/layout/_navigation.scss */
+  /* line 124, sass/layout/_navigation.scss */
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     display: inline-block;
     height: 3px;
     width: 3rem;
     background-color: #333;
     transition: all 0.1s; }
-  /* line 132, sass/layout/_navigation.scss */
+  /* line 134, sass/layout/_navigation.scss */
   .navigation__icon::before, .navigation__icon::after {
     content: "";
     position: absolute;
     left: 0; }
-  /* line 139, sass/layout/_navigation.scss */
+  /* line 141, sass/layout/_navigation.scss */
   .navigation__icon::before {
     top: -0.8rem; }
-  /* line 143, sass/layout/_navigation.scss */
+  /* line 145, sass/layout/_navigation.scss */
   .navigation__icon::after {
     top: 0.8rem; }
 
-/* line 148, sass/layout/_navigation.scss */
+/* line 150, sass/layout/_navigation.scss */
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
 
-/* line 152, sass/layout/_navigation.scss */
+/* line 154, sass/layout/_navigation.scss */
 .navigation__button:hover .navigation__icon::after {
   top: 1rem; }
 
-/* line 156, sass/layout/_navigation.scss */
+/* line 158, sass/layout/_navigation.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent; }
 
-/* line 160, sass/layout/_navigation.scss */
+/* line 162, sass/layout/_navigation.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
   top: 0;
   transform: rotate(135deg); }
 
-/* line 165, sass/layout/_navigation.scss */
+/* line 167, sass/layout/_navigation.scss */
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
